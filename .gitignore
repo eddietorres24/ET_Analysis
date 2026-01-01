@@ -1,0 +1,25 @@
+# NEVER commit raw data / huge files
+*.fastq.gz
+*.fq.gz
+*.bam
+*.bai
+*.cram
+*.crai
+*.sam
+*.bw
+*.bigWig
+*.bedGraph
+*.h5
+*.hdf5
+
+# Common logs/temp
+logs/
+tmp/
+*.log
+*.out
+*.err
+
+# References/indexes (often huge)
+refs/
+indices/
+genomes/

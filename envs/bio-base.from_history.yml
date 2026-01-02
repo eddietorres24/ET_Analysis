@@ -1,0 +1,16 @@
+name: bio-base
+channels:
+  - defaults
+  - bioconda
+  - conda-forge
+dependencies:
+  - python=3.11
+  - bedtools
+  - bcftools
+  - htslib
+  - fastqc
+  - multiqc
+  - pigz
+  - samtools[version='>=1.17']
+  - openssl[version='>=3']
+prefix: /home/eddie/miniforge3/envs/bio-base

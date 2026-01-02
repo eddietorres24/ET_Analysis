@@ -1,0 +1,38 @@
+
+     active environment : rnaseq
+    active env location : /home/eddie/miniforge3/envs/rnaseq
+            shell level : 3
+       user config file : /home/eddie/.condarc
+ populated config files : /home/eddie/miniforge3/.condarc
+                          /home/eddie/.condarc
+          conda version : 25.11.0
+    conda-build version : not installed
+         python version : 3.12.12.final.0
+                 solver : libmamba (default)
+       virtual packages : __archspec=1=skylake
+                          __conda=25.11.0=0
+                          __cuda=12.7=0
+                          __glibc=2.39=0
+                          __linux=6.6.87.1=0
+                          __unix=0=0
+       base environment : /home/eddie/miniforge3  (writable)
+      conda av data dir : /home/eddie/miniforge3/etc/conda
+  conda av metadata url : None
+           channel URLs : https://repo.anaconda.com/pkgs/main/linux-64
+                          https://repo.anaconda.com/pkgs/main/noarch
+                          https://repo.anaconda.com/pkgs/r/linux-64
+                          https://repo.anaconda.com/pkgs/r/noarch
+                          https://conda.anaconda.org/bioconda/linux-64
+                          https://conda.anaconda.org/bioconda/noarch
+                          https://conda.anaconda.org/conda-forge/linux-64
+                          https://conda.anaconda.org/conda-forge/noarch
+          package cache : /home/eddie/miniforge3/pkgs
+                          /home/eddie/.conda/pkgs
+       envs directories : /home/eddie/miniforge3/envs
+                          /home/eddie/.conda/envs
+               platform : linux-64
+             user-agent : conda/25.11.0 requests/2.32.5 CPython/3.12.12 Linux/6.6.87.1-microsoft-standard-WSL2 ubuntu/24.04.3 glibc/2.39 solver/libmamba conda-libmamba-solver/25.11.0 libmambapy/2.4.0
+                UID:GID : 1000:1000
+             netrc file : None
+           offline mode : False
+

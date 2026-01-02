@@ -1,0 +1,22 @@
+name: rnaseq
+channels:
+  - defaults
+  - bioconda
+  - conda-forge
+dependencies:
+  - python=3.11
+  - trim-galore
+  - cutadapt
+  - fastqc
+  - multiqc
+  - star
+  - samtools
+  - subread
+  - deeptools
+  - ucsc-bedgraphtobigwig
+  - ucsc-bigwigtobedgraph
+  - parallel
+  - pigz
+  - gawk
+  - coreutils
+prefix: /home/eddie/miniforge3/envs/rnaseq

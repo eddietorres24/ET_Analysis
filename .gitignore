@@ -1,3 +1,21 @@
+# Large/local-only
+data/
+results/
+
+# Nextflow (future-proof)
+.nextflow*
+work/
+
+# OS/editor clutter
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Conda / python junk
+__pycache__/
+*.pyc
+
 # NEVER commit raw data / huge files
 *.fastq.gz
 *.fq.gz

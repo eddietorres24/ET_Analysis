@@ -1,0 +1,54 @@
+RESULTS FOLDER CONVENTION (ET_Analysis)
+
+Single root output directory:
+- All analysis outputs go under: results/
+- results/ is gitignored (never pushed to GitHub)
+
+Organization:
+- results/<assay>/<project>/<run_date>/<step>/
+
+Where:
+- <assay> is one of: rnaseq, chipseq, atacseq (add more as needed)
+- <run_date> is YYYY-MM-DD (the day you ran the analysis)
+- <step> is the pipeline stage (qc, mapping, quant, counts, peaks, signal, diff, etc.)
+
+Examples:
+- results/rnaseq/ncrassa/2026-01-30/qc/
+- results/rnaseq/ncrassa/2026-01-30/mapping/
+- results/rnaseq/ncrassa/2026-01-30/counts/
+- results/chipseq/ncrassa/2026-01-30/peaks/
+
+Rules:
+1) Only ONE top-level results folder exists: results/
+2) Every run gets a date folder (YYYY-MM-DD) under the appropriate assay.
+3) Every script writes outputs to a single <step>/ folder for that run.
+4) Do not mix assays or steps within the same folder.
+5) If re-running the same step on the same date, either:
+   - overwrite intentionally, OR
+   - create a suffix folder like: qc_rerun1, mapping_rerun2
+
+Recommended standard step names:
+- rnaseq: qc, mapping, quant, counts, de, reports
+- chipseq: qc, mapping, dedup, peaks, signal, diff, reports
+- atacseq: qc, mapping, peaks, signal, diff, reports
+
+Related repo conventions:
+- Raw data is NOT stored in the repo.
+- Raw data is accessed via a symlink named: data/
+- results/ is NOT tracked; scripts should create subfolders as needed.
+
+How to properly make OUTDIRs in bash scripts:
+
+make_outdir() {
+  local assay="$1"                 # e.g. rnaseq
+  local project="$2"               # e.g. ncrassa_run1
+  local step="$3"                  # e.g. qc
+  local run_date="${4:-$(date +%F)}"
+
+  export ASSAY="$assay"
+  export PROJECT="$project"
+  export STEP="$step"
+  export RUN_DATE="$run_date"
+  export OUTDIR="results/${ASSAY}/${PROJECT}/${RUN_DATE}/${STEP}"
+
+  mkdir -p "$OUTDIR"
